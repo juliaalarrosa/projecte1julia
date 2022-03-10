@@ -11,6 +11,7 @@ config_version=4
 [application]
 
 config/name="PrimerJoc"
+run/main_scene="res://escena1godot.tscn"
 config/icon="res://icon.png"
 
 [physics]
