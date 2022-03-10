@@ -11,7 +11,7 @@ var velocitat_angular = 30
 func _ready():
 	pass # Replace with function body.
 	position = Vector2(500,250)
-	velocitat_angular = 30
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
@@ -24,4 +24,4 @@ func _process(delta):
 	if position.y >= 600 or position.y <= 0:
 		velocitat *= -1
 	
-	$Segon.rotation_degrees += velocitat_angular
+	$fill.rotation_degrees += velocitat_angular
