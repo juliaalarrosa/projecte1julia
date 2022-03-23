@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://escenes/CosAnimat.tscn" type="PackedScene" id=1]
+[ext_resource path="res://escenes/terra.tscn" type="PackedScene" id=2]
+
+[node name="pantalla2" type="Node2D"]
+
+[node name="2terras" parent="." instance=ExtResource( 2 )]
+position = Vector2( 522, 172 )
+
+[node name="2terras2" parent="." instance=ExtResource( 2 )]
+position = Vector2( -4, 64 )
+
+[node name="CosAnimat" parent="." instance=ExtResource( 1 )]
+position = Vector2( 8, -48 )
+
+[node name="Camera2D2" type="Camera2D" parent="CosAnimat"]
+position = Vector2( -8, 48 )

@@ -7,7 +7,7 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="CosAnimat" parent="." instance=ExtResource( 1 )]
-position = Vector2( 412, 194 )
+position = Vector2( -67, 377 )
 
 [node name="StaticBody2D" parent="." instance=ExtResource( 2 )]
 position = Vector2( 926, 321 )
