@@ -4,6 +4,7 @@
 [ext_resource path="res://escenes/personatge.tscn" type="PackedScene" id=2]
 
 [node name="Node2D" type="Node2D"]
+position = Vector2( -1, 1 )
 
 [node name="Personatge" parent="." instance=ExtResource( 2 )]
 position = Vector2( 309, 208 )

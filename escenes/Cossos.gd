@@ -4,7 +4,7 @@ var velocitat = Vector2.ZERO
 var gravetat = Vector2.DOWN * 980
 var velocitat_base = 200
 var direccio  = Vector2.DOWN
-var velocitat_salt = -600
+var velocitat_salt = -500
 func _physics_process (delta):
 	velocitat.x = 0
 	velocitat += gravetat * delta
@@ -34,3 +34,10 @@ func anima(velocitat):
 
 func _on_final_body_entered(body):
 	get_tree().change_scene("res://escenes/pantalla2.tscn")
+
+
+
+
+func _on_Area2D_body_entered(body):
+	if body.name=="CosAnimat":
+		get_tree().reload_current_scene()

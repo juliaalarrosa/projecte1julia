@@ -1,24 +1,43 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://escenes/CosAnimat.tscn" type="PackedScene" id=1]
 [ext_resource path="res://escenes/terra.tscn" type="PackedScene" id=2]
 [ext_resource path="res://escenes/final.tscn" type="PackedScene" id=3]
+[ext_resource path="res://escenes/ObstacleParet.tscn" type="PackedScene" id=4]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="CosAnimat" parent="." instance=ExtResource( 1 )]
-position = Vector2( -67, 377 )
+position = Vector2( -310, 176 )
 
 [node name="StaticBody2D" parent="." instance=ExtResource( 2 )]
-position = Vector2( 926, 321 )
+position = Vector2( 824, 302 )
 
 [node name="StaticBody2D3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 496, 389 )
+position = Vector2( 523, 350 )
 
 [node name="StaticBody2D2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 23, 446 )
+position = Vector2( 216, 411 )
 
 [node name="final" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1115, 81 )
+
+[node name="StaticBody2D4" parent="." instance=ExtResource( 4 )]
+position = Vector2( -297, 378 )
+
+[node name="StaticBody2D5" parent="." instance=ExtResource( 4 )]
+position = Vector2( -225, -113 )
+
+[node name="StaticBody2D6" parent="." instance=ExtResource( 4 )]
+position = Vector2( -194, 365 )
+
+[node name="StaticBody2D7" parent="." instance=ExtResource( 4 )]
+position = Vector2( -103, -73 )
+
+[node name="StaticBody2D8" parent="." instance=ExtResource( 4 )]
+position = Vector2( -96, 403 )
+
+[node name="StaticBody2D9" parent="." instance=ExtResource( 4 )]
+position = Vector2( 10, -32 )
 
 [connection signal="body_entered" from="final" to="CosAnimat" method="_on_final_body_entered"]

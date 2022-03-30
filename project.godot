@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="PrimerJoc"
-run/main_scene="res://escenes/xoc.tscn"
+run/main_scene="res://escenes/pantalla1.tscn"
 config/icon="res://imatges/icon.png"
 
 [input]
