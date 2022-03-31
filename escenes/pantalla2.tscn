@@ -1,11 +1,23 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://escenes/final.tscn" type="PackedScene" id=1]
 [ext_resource path="res://escenes/terra_llarg.tscn" type="PackedScene" id=2]
 [ext_resource path="res://escenes/CosAnimat.tscn" type="PackedScene" id=3]
 [ext_resource path="res://escenes/PujaBaixa.tscn" type="PackedScene" id=4]
+[ext_resource path="res://escenes/plataforma.tscn" type="PackedScene" id=5]
+[ext_resource path="res://imatges/cel.png" type="Texture" id=6]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Cel2" type="Sprite" parent="."]
+position = Vector2( 2564, 417 )
+scale = Vector2( 1, 1.14111 )
+texture = ExtResource( 6 )
+
+[node name="Cel" type="Sprite" parent="."]
+position = Vector2( 860, 413 )
+scale = Vector2( 1.01, 1.13111 )
+texture = ExtResource( 6 )
 
 [node name="final" parent="." instance=ExtResource( 1 )]
 
@@ -16,11 +28,38 @@ position = Vector2( 68, 12 )
 position = Vector2( 412, 408 )
 
 [node name="Node2D" type="Node2D" parent="."]
-position = Vector2( 1100, 40 )
+position = Vector2( 1084, 12 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Area2D" parent="Node2D" instance=ExtResource( 4 )]
 
+[node name="Node2D3" type="Node2D" parent="."]
+position = Vector2( 1478, 17 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" parent="Node2D3" instance=ExtResource( 4 )]
+
+[node name="Node2D2" type="Node2D" parent="."]
+position = Vector2( 668, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" parent="Node2D2" instance=ExtResource( 4 )]
+
+[node name="StaticBody2D" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2149, 318 )
+
+[node name="StaticBody2D2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2836, 314 )
+
+[node name="StaticBody2D3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3484, 310 )
+
 [connection signal="body_entered" from="Node2D/Area2D" to="CosAnimat" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Node2D3/Area2D" to="CosAnimat" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Node2D2/Area2D" to="CosAnimat" method="_on_Area2D_body_entered"]

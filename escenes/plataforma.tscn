@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://StaticBody2D.gd" type="Script" id=1]
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "dreta_esquerra"
+length = 6.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 600, 0 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 245.025, 24.5 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="plataforma" type="StaticBody2D" parent="."]
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="plataforma"]
+margin_left = -273.0
+margin_top = -20.0
+margin_right = 217.0
+margin_bottom = 29.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="plataforma"]
+anims/RESET = SubResource( 3 )
+anims/dreta_esquerra = SubResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plataforma"]
+position = Vector2( -27.4255, 5.5 )
+shape = SubResource( 1 )

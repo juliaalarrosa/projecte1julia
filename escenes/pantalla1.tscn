@@ -1,11 +1,17 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://escenes/CosAnimat.tscn" type="PackedScene" id=1]
 [ext_resource path="res://escenes/terra.tscn" type="PackedScene" id=2]
 [ext_resource path="res://escenes/final.tscn" type="PackedScene" id=3]
 [ext_resource path="res://escenes/ObstacleParet.tscn" type="PackedScene" id=4]
+[ext_resource path="res://imatges/cel.png" type="Texture" id=5]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Cel" type="Sprite" parent="."]
+position = Vector2( 68, 354.75 )
+scale = Vector2( 1.40941, 1.76278 )
+texture = ExtResource( 5 )
 
 [node name="CosAnimat" parent="." instance=ExtResource( 1 )]
 position = Vector2( -310, 176 )
