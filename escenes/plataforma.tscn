@@ -47,7 +47,7 @@ margin_left = -273.0
 margin_top = -20.0
 margin_right = 217.0
 margin_bottom = 29.0
-color = Color( 0.960784, 0.113725, 0.0235294, 1 )
+color = Color( 0.490196, 0.192157, 0.670588, 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="plataforma"]
 anims/RESET = SubResource( 3 )

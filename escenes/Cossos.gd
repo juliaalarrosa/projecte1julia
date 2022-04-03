@@ -45,3 +45,12 @@ func _on_muerte_body_entered(body):
 func _on_Area2D_body_entered(body):
 	if body.name=="CosAnimat":
 		get_tree().reload_current_scene()
+
+
+
+	
+
+
+func _on_llegada2_body_entered(body):
+	get_tree().change_scene("res://escenes/pantalla3.tscn")
+	pass # Replace with function body.
