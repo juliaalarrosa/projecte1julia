@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://escenes/final.tscn" type="PackedScene" id=1]
 [ext_resource path="res://escenes/terra_llarg.tscn" type="PackedScene" id=2]
@@ -6,17 +6,29 @@
 [ext_resource path="res://escenes/PujaBaixa.tscn" type="PackedScene" id=4]
 [ext_resource path="res://escenes/plataforma.tscn" type="PackedScene" id=5]
 [ext_resource path="res://imatges/cel.png" type="Texture" id=6]
+[ext_resource path="res://escenes/muerte.tscn" type="PackedScene" id=7]
+[ext_resource path="res://escenes/llegada.tscn" type="PackedScene" id=8]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Cel2" type="Sprite" parent="."]
-position = Vector2( 2564, 417 )
-scale = Vector2( 1, 1.14111 )
+position = Vector2( 2300, 671.875 )
+scale = Vector2( 1, 2.19139 )
+texture = ExtResource( 6 )
+
+[node name="Cel3" type="Sprite" parent="."]
+position = Vector2( 3970, 669.938 )
+scale = Vector2( 1, 2.19125 )
 texture = ExtResource( 6 )
 
 [node name="Cel" type="Sprite" parent="."]
-position = Vector2( 860, 413 )
-scale = Vector2( 1.01, 1.13111 )
+position = Vector2( 393.5, 674 )
+scale = Vector2( 1.29118, 2.19111 )
+texture = ExtResource( 6 )
+
+[node name="Cel4" type="Sprite" parent="."]
+position = Vector2( 5894.25, 667 )
+scale = Vector2( 1.265, 2.20222 )
 texture = ExtResource( 6 )
 
 [node name="final" parent="." instance=ExtResource( 1 )]
@@ -60,6 +72,13 @@ position = Vector2( 2836, 314 )
 [node name="StaticBody2D3" parent="." instance=ExtResource( 5 )]
 position = Vector2( 3484, 310 )
 
+[node name="muerte" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3194, 862 )
+
+[node name="StaticBody2D4" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3597, 512 )
+
 [connection signal="body_entered" from="Node2D/Area2D" to="CosAnimat" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Node2D3/Area2D" to="CosAnimat" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Node2D2/Area2D" to="CosAnimat" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="muerte" to="CosAnimat" method="_on_muerte_body_entered"]

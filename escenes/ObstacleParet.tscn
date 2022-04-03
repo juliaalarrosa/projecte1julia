@@ -10,6 +10,7 @@ margin_left = -19.0
 margin_top = -148.0
 margin_right = 21.0
 margin_bottom = 147.0
+color = Color( 0.921569, 0.615686, 0.0901961, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 1, -0.375 )

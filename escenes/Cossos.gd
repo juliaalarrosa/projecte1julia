@@ -14,6 +14,8 @@ func _physics_process (delta):
 		velocitat += Vector2.LEFT * velocitat_base
 	if Input.is_action_just_pressed("devant") and is_on_floor():
 		velocitat.y = velocitat_salt
+	if Input.is_action_pressed("ui_cancel"):
+		get_tree().quit()
 	velocitat = move_and_slide (velocitat, Vector2.UP)
 	anima(velocitat)
 
@@ -36,7 +38,9 @@ func _on_final_body_entered(body):
 	get_tree().change_scene("res://escenes/pantalla2.tscn")
 
 
-
+func _on_muerte_body_entered(body):
+	if body.name=="CosAnimat":
+		get_tree().reload_current_scene()
 
 func _on_Area2D_body_entered(body):
 	if body.name=="CosAnimat":
